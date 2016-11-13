@@ -5,7 +5,7 @@
 * `redis:alpine` runs Redis backend
 * it persists data in `redis` directory, which is attached as a volume to `redis:alpine`
 * uses application data as a volume, which is attached as a volume to hastebin image
-* can be run using [Rancher](https://github.com/rancher/rancher), see below
+* can be run using [Rancher](https://github.com/rancher/rancher)
 
 Setup:
 
