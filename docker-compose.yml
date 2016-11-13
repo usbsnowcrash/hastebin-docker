@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  hastebin:
+    build: .
+    ports:
+      - "7777:7777"
+    networks:
+      - docker_hastebin
+    volumes:
+      - ./haste-server:/app
+      - ./config.js:/app/config.js:ro
+  redis:
+    image: redis:alpine
+    networks:
+      - docker_hastebin
+    volumes:
+      - ./redis:/data
+
+networks:
+  docker_hastebin:
+    driver: bridge
