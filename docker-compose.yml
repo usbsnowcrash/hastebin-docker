@@ -7,6 +7,7 @@ services:
       - "7777:7777"
     networks:
       - docker_hastebin
+    restart: always
     volumes:
       - ./haste-server:/app
       - ./config.js:/app/config.js:ro
@@ -14,6 +15,7 @@ services:
     image: redis:alpine
     networks:
       - docker_hastebin
+    restart: always
     volumes:
       - ./redis:/data
 
